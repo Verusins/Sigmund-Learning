@@ -43,4 +43,65 @@ rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
 
 Determine rank of tensor:
 `tf.rank(rank2_tensor)`
+
 -> <tf.Tensor: shape=(), dtype=int32, numpy=1>
+
+Determine the shape of tensor / reshape:
+
+`rank2_tensor.shape`
+
+-> Tensorshape([2, 2]) # first 2 for interior list len, second 2 for outer
+
+`rank1_tensor.shape`
+
+-> Tensorshape([3])
+
+````tensor1 = tf.ones(1,2,3) # creates a shape of [1,2,3] tensor full of ones
+tensor2 = tf.reshape(tensor1, [2,3,1]) # reshaping
+tensor3 = tf.reshape(tensor2, [3, -1]) # -1 for auto calculate, reshaping to [3,3]
+# auto calculate: e.g. we have 500 elements reshaping to [5, -1] would lead to [5, 100]
+
+print(tensor1)
+print(tensor2)
+print(tensor3)```
+
+output:
+
+```tf.Tensor([[[1. 1. 1.][1. 1. 1.]]], shape=(1, 2, 3), dtyp2=float32)
+tf.Tensor...```
+
+Types of Tensors: (Above are variables)
+
+- **Variable**
+- **Constant**
+- Placeholder
+- SparseTensor
+
+Evaluate Tensor:
+```with tf.Session() as sess: # sess representing any session
+    tensor.eval() # tensor auto determining which course is used to evaluate```
+
+
+**Core Learning Algorithms A** 3/32
+TensorFlow Core Learning Algors
+- Linear Regression
+- Classificatin
+- Clustering
+- Hiddern Markov Models
+
+**Linear Regression**: can be in 3D, need more coordinates than y=mx+b
+e.g. in R^3, we use x,y to predict z, or x,z to predict y.
+`!pip install -q sklearn`
+and a ton of imports, refer to the documentation
+`import numpy as np` an optimized array in python, like cross product etc.
+`import pandas as pd` a data manipulation tool (visualize / cut rows)
+`import matplotlib.pyplot as plt` visualize graph and dataset
+`import tensorflow.compat.v2.feature_column as fc` THE CORE
+
+**Core Learning Algorithms B** 4/32
+
+a example dataset: titanic dataset
+"Whos going to survive given the information"
+Load dataset using `pd.read_csv` and `dftrain.pop`
+Linear regression is a good fit because the parameters directly affect the person's surviving the titanic crash
+````
