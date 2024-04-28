@@ -56,19 +56,23 @@ Determine the shape of tensor / reshape:
 
 -> Tensorshape([3])
 
-```tensor1 = tf.ones(1,2,3) # creates a shape of [1,2,3] tensor full of ones
+```
+tensor1 = tf.ones(1,2,3) # creates a shape of [1,2,3] tensor full of ones
 tensor2 = tf.reshape(tensor1, [2,3,1]) # reshaping
 tensor3 = tf.reshape(tensor2, [3, -1]) # -1 for auto calculate, reshaping to [3,3]
 # auto calculate: e.g. we have 500 elements reshaping to [5, -1] would lead to [5, 100]
 
 print(tensor1)
 print(tensor2)
-print(tensor3)```
+print(tensor3)
+```
 
 output:
 
-```tf.Tensor([[[1. 1. 1.][1. 1. 1.]]], shape=(1, 2, 3), dtyp2=float32)
-tf.Tensor...```
+```
+tf.Tensor([[[1. 1. 1.][1. 1. 1.]]], shape=(1, 2, 3), dtyp2=float32)
+tf.Tensor...
+```
 
 Types of Tensors: (Above are variables)
 
@@ -78,8 +82,10 @@ Types of Tensors: (Above are variables)
 - SparseTensor
 
 Evaluate Tensor:
-```with tf.Session() as sess: # sess representing any session
-    tensor.eval() # tensor auto determining which course is used to evaluate```
+```
+with tf.Session() as sess: # sess representing any session
+    tensor.eval() # tensor auto determining which course is used to evaluate
+```
 
 
 **Core Learning Algorithms A** 3/32
