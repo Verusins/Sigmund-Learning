@@ -12,5 +12,6 @@ Artificial Intelligence - A.I.
 ML is a part of AI,
 
 > **Machine Learning** is _figuring out the rules_ for us, replacing the predefined rules.
-> ML Goal: raise accuracy
-> Feeding answers to the model instead of rules.
+
+ML Goal: raise accuracy
+Feeding answers to the model instead of rules.
