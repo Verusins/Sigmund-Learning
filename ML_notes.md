@@ -6,6 +6,7 @@ This is freeCodeCamp ML learning nodes
 Artificial Intelligence - A.I.
 
 - A.I. can be _predefined_: e.g. tic-tac-toe / chess
+
   (It is a bunch of rules been created for the A.I. , could be simple)
   more complex example: e.g. pacman: facing the character and chase
 
@@ -30,12 +31,16 @@ Feeding answers to the model instead of rules.
 **Shape**: represents the dimension of data.
 
 Create Tensors: e.g.
+
+```
 string = tf.Variable("this is a string", tf.string)
-number = tf.Variable(114514, tf.int16) (.float64)
-rank1_tensor = tf.Variable(["test", "ok", "burger"], tf.string) (1*3)
-rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string) (2*2)
+number = tf.Variable(114514, tf.int16) (swap w .float64)
+rank1_tensor = tf.Variable(["test", "ok", "burger"], tf.string)
+rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string)
+```
+
 (This is where the higher dimension kicks in!)
 
 Determine rank of tensor:
-tf.rank(rank2_tensor)
+`tf.rank(rank2_tensor)`
 -> <tf.Tensor: shape=(), dtype=int32, numpy=1>
