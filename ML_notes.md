@@ -1,4 +1,4 @@
-freeCodeCamp ML learning nodes.
+This is freeCodeCamp ML learning nodes
 
 **Tensorflow Tutorial**
 
@@ -15,3 +15,27 @@ ML is a part of AI,
 
 ML Goal: raise accuracy
 Feeding answers to the model instead of rules.
+
+> **Neural Networks** is a part of Machine Learning, its _uses a **layered** representation of data_
+
+- Data:
+  - Features: input
+  - Label: output
+    using the inputs to predict the output form the given data.
+
+**Introduction to TensorFlow** 2/32
+
+> a **tensor** is a generalization of vectors and matrices in a higher dimension, a type of data point. Each tensor represents a partially defined computation that will eventually produce a value.
+
+**Shape**: represents the dimension of data.
+
+Create Tensors: e.g.
+string = tf.Variable("this is a string", tf.string)
+number = tf.Variable(114514, tf.int16) (.float64)
+rank1_tensor = tf.Variable(["test", "ok", "burger"], tf.string) (1*3)
+rank2_tensor = tf.Variable([["test", "ok"], ["test", "yes"]], tf.string) (2*2)
+(This is where the higher dimension kicks in!)
+
+Determine rank of tensor:
+tf.rank(rank2_tensor)
+-> <tf.Tensor: shape=(), dtype=int32, numpy=1>
