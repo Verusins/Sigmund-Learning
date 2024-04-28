@@ -56,7 +56,7 @@ Determine the shape of tensor / reshape:
 
 -> Tensorshape([3])
 
-````tensor1 = tf.ones(1,2,3) # creates a shape of [1,2,3] tensor full of ones
+```tensor1 = tf.ones(1,2,3) # creates a shape of [1,2,3] tensor full of ones
 tensor2 = tf.reshape(tensor1, [2,3,1]) # reshaping
 tensor3 = tf.reshape(tensor2, [3, -1]) # -1 for auto calculate, reshaping to [3,3]
 # auto calculate: e.g. we have 500 elements reshaping to [5, -1] would lead to [5, 100]
@@ -104,4 +104,4 @@ a example dataset: titanic dataset
 "Whos going to survive given the information"
 Load dataset using `pd.read_csv` and `dftrain.pop`
 Linear regression is a good fit because the parameters directly affect the person's surviving the titanic crash
-````
+
