@@ -82,14 +82,15 @@ Types of Tensors: (Above are variables)
 - SparseTensor
 
 Evaluate Tensor:
+
 ```
 with tf.Session() as sess: # sess representing any session
     tensor.eval() # tensor auto determining which course is used to evaluate
 ```
 
-
 **Core Learning Algorithms A** 3/32
 TensorFlow Core Learning Algors
+
 - Linear Regression
 - Classificatin
 - Clustering
@@ -111,3 +112,27 @@ a example dataset: titanic dataset
 Load dataset using `pd.read_csv` and `dftrain.pop`
 Linear regression is a good fit because the parameters directly affect the person's surviving the titanic crash
 
+**We need two _separate_ dataset to test which one to be used to _train_ and which one to _test_**
+
+`var_name.head()` getting the first 5 entries + columns
+
+`var_name.loc[index]` getting a specific column
+
+`var_name.describe()` everything, data
+
+**Core Learning Algorithms C** 5/32
+
+`var_name["col_name"].unique()` all entries in a col
+
+**Core Learning Algorithms D** 6/32
+
+Training: using **epoch** is the amount of times our model will see the entire dataset. Batch size is how many entrys in a epoch.
+
+We need `tf.data.Dataset` type in order to work for TensorFlow.
+
+`tf.data.Dataset.from_tensor_slices(input, label)` create object for the type.
+
+**estimator** is a basic implementation of algorithms in TensorFlow
+
+Go here for more details:
+https://colab.research.google.com/drive/1OYGcn5um3dUofsnM157QuE4IteiYsbwW#scrollTo=avd1e7nsfJb3
