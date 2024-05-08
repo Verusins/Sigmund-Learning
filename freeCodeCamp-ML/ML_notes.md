@@ -126,7 +126,7 @@ Linear regression is a good fit because the parameters directly affect the perso
 
 **Core Learning Algorithms D** 6/32
 
-Training: using **epoch** is the amount of times our model will see the entire dataset. Batch size is how many entrys in a epoch.
+Training: using **epoch** is one stream of the whole dataset that is randomized.
 
 We need `tf.data.Dataset` type in order to work for TensorFlow.
 
